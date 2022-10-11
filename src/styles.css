@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* font */
+
+h1,
+h2,
+h3 {
+  @apply font-serif;
+}
+
+/* header */
+
+header {
+  background-image: url(../images/mobile/image-header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width: 1024px) {
+  header {
+    background-image: url(../images/desktop/image-header.jpg);
+  }
+}
+
+/* navigation */
+
+.nav-list {
+  @apply text-black/50 lg:text-white lg:flex lg:items-center lg:gap-10 fixed inset-y-40 inset-x-6 md:inset-x-40 lg:static bg-white lg:bg-transparent hidden;
+}
+
+.nav-list > * {
+  @apply text-center mx-auto py-2;
+}
+
+.nav-list.active {
+  @apply block lg:flex;
+}
+
+/* hamburger */
+.line {
+  @apply bg-white h-px w-7 block my-2 duration-300;
+}
+
+.hamburger.active .line1 {
+  @apply translate-y-9px rotate-45;
+}
+.hamburger.active .line3 {
+  @apply -translate-y-9px -rotate-45;
+}
+.hamburger.active .line2 {
+  @apply opacity-0;
+}
+body.active {
+  @apply h-full overflow-y-hidden lg:overflow-auto;
+}
+
+/* buttons */
+
+.btn-yellow {
+  @apply font-serif uppercase text-lg underline underline-offset-1 decoration-8 decoration-yellow hover:decoration-yellow/50;
+}
+
+.btn-red {
+  @apply font-serif uppercase text-lg underline underline-offset-1 decoration-8 decoration-soft-red hover:decoration-soft-red/50;
+}
+
+.contact-btn {
+  @apply lg:bg-white lg:text-black lg:hover:bg-white/50 bg-yellow hover:bg-yellow/70 rounded-full px-1 py-4 max-w-fit px-4 uppercase font-serif;
+}
+
+/* sections  */
+
+.section-1 > * {
+  @apply w-full;
+}
+
+.grid-content {
+  @apply flex flex-col justify-center items-baseline gap-10 p-10;
+}
+
+/* section 2 */
+.bg-text-wrapper-1 {
+  background-image: url(../images/desktop/image-graphic-design.jpg);
+}
+
+.bg-text-wrapper-2 {
+  background-image: url(../images/desktop/image-photography.jpg);
+}
+
+.bg-text-wrapper-1,
+.bg-text-wrapper-2 {
+  @apply flex flex-col items-center justify-end gap-6 basis-full pt-60 lg:pt-96 pb-10 text-center bg-cover bg-center lg:bg-top bg-no-repeat;
+}
+
+/* section 3 */
+
+.testimonial-card {
+  @apply flex flex-col items-center justify-between gap-1;
+}
+
+.testimonial-card .user-img {
+  @apply rounded-full w-24 mb-12;
+}
+
+.testimonial-card .user-comment {
+  @apply text-lg text-center text-gray-900/70 mb-12;
+}
+
+.testimonial-card .user-name {
+  @apply font-black text-lg;
+}
+
+.testimonial-card .user-profession {
+  @apply text-gray-900/50;
+}
+
+/* section 4 */
+
+.section-4 img {
+  @apply w-full;
+}
+
+/* footer */
+
+.footer-list > * {
+  @apply text-dark-cyan hover:text-dark-cyan/70;
+}
+
+.social-list > * {
+  @apply hover:scale-125;
+}
