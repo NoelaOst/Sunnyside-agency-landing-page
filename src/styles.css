@@ -28,7 +28,7 @@ header {
 /* navigation */
 
 .nav-list {
-  @apply text-black/50 lg:text-white lg:flex lg:items-center lg:gap-10 fixed inset-y-40 inset-x-6 md:inset-x-40 lg:static bg-white lg:bg-transparent hidden z-[1];
+  @apply text-black/50 lg:text-white lg:flex lg:items-center lg:gap-10 fixed inset-y-40 inset-x-6 md:inset-x-40 lg:static bg-white lg:bg-transparent hidden z-20;
 }
 .nav-list.active {
   @apply flex flex-col justify-center gap-5 lg:flex-row;
